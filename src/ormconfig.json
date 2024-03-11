@@ -1,0 +1,13 @@
+[
+  {
+    "name": "default",
+    "type": "postgres",
+    "host": "dev.syurl.co.kr",
+    "port": 5432,
+    "username": "postgres",
+    "password": "SyCompanyPostGreSQLPassWord112233332211!!@@####@@!!",
+    "database": "",
+    "synchronize": false,
+    "entities": ["entities/*.js"]
+  }
+]

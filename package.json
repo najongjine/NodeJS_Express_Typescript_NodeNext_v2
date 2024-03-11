@@ -1,0 +1,51 @@
+{
+  "name": "nodeexpress_ts_v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && tsc",
+    "preserve": "npm run build",
+    "serve": "cross-env NODE_ENV=development concurrently \"tsc --watch\" \"nodemon -q dist/index.js\"",
+    "start": "cross-env NODE_ENV=production pm2 start dist/index.js --name 'node_v2' -e err.log -o out.log --time"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.25",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "tsc-watch": "^6.0.4",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "@gradio/client": "^0.13.0",
+    "@prisma/client": "^5.10.2",
+    "axios": "^1.6.7",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "express-rate-limit": "^7.2.0",
+    "fs": "^0.0.1-security",
+    "helmet": "^7.1.0",
+    "image-size": "^1.1.1",
+    "ioredis": "^5.3.2",
+    "jsonwebtoken": "^9.0.2",
+    "moment-timezone": "^0.5.45",
+    "multer": "^1.4.5-lts.1",
+    "node-schedule": "^2.1.1",
+    "path": "^0.12.7",
+    "pg": "^8.11.3",
+    "rimraf": "^5.0.5",
+    "sharp": "^0.33.2",
+    "socket.io": "^4.7.4"
+  }
+}

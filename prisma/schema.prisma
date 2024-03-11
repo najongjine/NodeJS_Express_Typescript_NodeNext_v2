@@ -1,0 +1,317 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_app {
+  id            BigInt    @id @default(autoincrement())
+  created_dt    DateTime? @default(now()) @db.Timestamp(6)
+  updated_dt    DateTime? @db.Timestamp(6)
+  app_name      String?   @db.VarChar(50)
+  fcm_key       String?   @db.VarChar(100)
+  rejoin_day    Int?      @db.SmallInt
+  app_icon_path String?   @db.VarChar(300)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_app_store {
+  id                   BigInt                @id(map: "t_app_stort_pkey") @default(autoincrement())
+  created_dt           DateTime?             @default(now()) @db.Timestamp(6)
+  updated_dt           DateTime?             @db.Timestamp(6)
+  b_update             Boolean?
+  store_url            String?               @db.VarChar(300)
+  version              String?               @db.VarChar(20)
+  store_category_id    BigInt?
+  t_app_store_category t_app_store_category? @relation(fields: [store_category_id], references: [id], onDelete: Cascade)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_app_store_category {
+  id          BigInt        @id @default(autoincrement())
+  created_dt  DateTime?     @default(now()) @db.Timestamp(6)
+  updated_dt  DateTime?     @db.Timestamp(6)
+  iname       String?       @db.VarChar(255)
+  t_app_store t_app_store[]
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_app_version_history {
+  id         BigInt    @id @default(autoincrement())
+  created_dt DateTime? @default(now()) @db.Timestamp(6)
+  updated_dt DateTime? @db.Timestamp(6)
+  version    String?   @db.VarChar(50)
+  content    String?   @db.VarChar(1000)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_ask_answer {
+  id              BigInt    @id @default(autoincrement())
+  answer          String?   @db.VarChar(400)
+  created_dt      DateTime? @default(now()) @db.Timestamp(6)
+  updated_dt      DateTime? @db.Timestamp(6)
+  ask_question_id BigInt
+  user_id         BigInt
+  t_user          t_user    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_ask_question {
+  id         BigInt    @id(map: "t_ask_pkey") @default(autoincrement())
+  content    String?   @db.VarChar(400)
+  created_dt DateTime? @default(now()) @db.Timestamp(6)
+  updated_dt DateTime? @db.Timestamp(6)
+  ask_flag   Boolean?  @default(false)
+  user_id    BigInt
+  t_user     t_user    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_external_product {
+  id                     BigInt                   @id(map: "t_products_pkey") @default(autoincrement())
+  created_dt             DateTime?                @default(now()) @db.Timestamp(6)
+  updated_dt             DateTime?                @db.Timestamp(6)
+  title                  String?                  @db.VarChar(255)
+  iprice                 Decimal?                 @db.Decimal(10, 2)
+  mainimg                String?                  @db.VarChar(500)
+  pcategory_id           BigInt?
+  url                    String?                  @db.VarChar(500)
+  ikind                  String?                  @db.VarChar(100)
+  t_pcategory            t_pcategory?             @relation(fields: [pcategory_id], references: [id], onDelete: Cascade, map: "t_external_product_external_pcategory_id_fkey")
+  t_external_product_img t_external_product_img[]
+}
+
+model t_external_product_img {
+  id                  BigInt              @id @default(autoincrement())
+  created_dt          DateTime?           @default(now()) @db.Timestamp(6)
+  updated_dt          DateTime?           @db.Timestamp(6)
+  external_product_id BigInt?
+  img                 String?             @db.VarChar(500)
+  t_external_product  t_external_product? @relation(fields: [external_product_id], references: [id], onDelete: Cascade)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_faq_answer {
+  id              BigInt         @id @default(autoincrement())
+  faq_answer      String?        @db.VarChar(255)
+  fag_question_id BigInt
+  t_faq_question  t_faq_question @relation(fields: [fag_question_id], references: [id], onDelete: Cascade)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_faq_category {
+  id             BigInt           @id @default(autoincrement())
+  faq_category   String?          @db.VarChar(100)
+  t_faq_question t_faq_question[]
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_faq_question {
+  id              BigInt         @id @default(autoincrement())
+  faq_question    String?        @db.VarChar(255)
+  faq_category_id BigInt
+  t_faq_answer    t_faq_answer[]
+  t_faq_category  t_faq_category @relation(fields: [faq_category_id], references: [id], onDelete: Cascade)
+}
+
+model t_pcategory {
+  id                 BigInt               @id(map: "t_external_pcategory_pkey") @default(autoincrement())
+  created_dt         DateTime?            @default(now()) @db.Timestamp(6)
+  updated_dt         DateTime?            @db.Timestamp(6)
+  iname              String?              @db.VarChar(100)
+  t_external_product t_external_product[]
+  t_user_favcategory t_user_favcategory[]
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_store_canvas {
+  id               BigInt    @id
+  created_dt       DateTime? @default(now()) @db.Timestamp(6)
+  updated_dt       DateTime? @db.Timestamp(6)
+  content          String?
+  store_product_id BigInt?
+  iorder           Int?      @default(1)
+}
+
+model t_store_option {
+  id               BigInt    @id @default(autoincrement())
+  created_dt       DateTime? @default(now()) @db.Timestamp(6)
+  updated_dt       DateTime? @db.Timestamp(6)
+  store_product_id BigInt?
+  iname            String?   @db.VarChar(255)
+  iorder           Int?      @default(1) @db.SmallInt
+}
+
+model t_store_option2 {
+  id               BigInt    @id @default(autoincrement())
+  created_dt       DateTime? @default(now()) @db.Timestamp(6)
+  updated_dt       DateTime? @db.Timestamp(6)
+  store_product_id BigInt?
+  store_option_id  BigInt?
+  iname            String?   @db.VarChar(50)
+  iprice           Decimal?  @default(0) @db.Decimal(10, 2)
+  qty              Int?      @default(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_store_product {
+  id                        BigInt                      @id @default(autoincrement())
+  created_dt                DateTime?                   @default(now()) @db.Timestamp(6)
+  updated_dt                DateTime?                   @db.Timestamp(6)
+  title                     String?                     @db.VarChar(255)
+  external_product_id       BigInt?
+  url                       String?                     @db.VarChar(500)
+  mainimg                   String?                     @db.VarChar(500)
+  istate                    String?                     @default("temp") @db.VarChar(15)
+  store_product_category_id BigInt?
+  iprice                    Decimal?                    @default(0) @db.Decimal(10, 2)
+  qty                       Int?                        @default(0)
+  shipmethod                String?                     @default("prepay") @db.VarChar(255)
+  shipfee                   Decimal?                    @default(0) @db.Decimal(10, 2)
+  origin                    String?                     @db.VarChar(50)
+  manufacture               String?                     @db.VarChar(100)
+  brand                     String?                     @db.VarChar(100)
+  imodel                    String?                     @db.VarChar(150)
+  bunderage                 Boolean?                    @default(true)
+  t_store_product_component t_store_product_component[]
+  t_store_product_img       t_store_product_img[]
+}
+
+model t_store_product_category {
+  id         BigInt    @id
+  created_dt DateTime? @default(now()) @db.Timestamp(6)
+  updated_dt DateTime? @db.Timestamp(6)
+  iname      String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_store_product_component {
+  id               BigInt           @id @default(autoincrement())
+  created_dt       DateTime?        @default(now()) @db.Timestamp(6)
+  updated_dt       DateTime?        @db.Timestamp(6)
+  xpos             String?          @db.VarChar(50)
+  ypos             String?          @db.VarChar(50)
+  scale            String?          @db.VarChar(50)
+  ipath            String?          @db.VarChar(500)
+  iorder           Int?             @default(1) @db.SmallInt
+  store_product_id BigInt?
+  t_store_product  t_store_product? @relation(fields: [store_product_id], references: [id], onDelete: Cascade)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_store_product_img {
+  id                            BigInt                          @id @default(autoincrement())
+  created_dt                    DateTime?                       @default(now()) @db.Timestamp(6)
+  updated_dt                    DateTime?                       @db.Timestamp(6)
+  store_product_id              BigInt?
+  ipath                         String?                         @db.VarChar(500)
+  iorder                        Int?                            @default(1)
+  uuid                          String?                         @db.VarChar(500)
+  t_store_product               t_store_product?                @relation(fields: [store_product_id], references: [id], onDelete: Cascade)
+  t_store_product_img_component t_store_product_img_component[]
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_store_product_img_component {
+  id                   BigInt               @id @default(autoincrement())
+  created_dt           DateTime?            @default(now()) @db.Timestamp(6)
+  updated_dt           DateTime?            @db.Timestamp(6)
+  xpos                 String?              @db.VarChar(50)
+  ypos                 String?              @db.VarChar(50)
+  scale                String?              @db.VarChar(50)
+  ipath                String?              @db.VarChar(500)
+  iorder               Int?                 @default(1) @db.SmallInt
+  store_product_img_id BigInt?
+  uuid                 String?              @db.VarChar(500)
+  t_store_product_img  t_store_product_img? @relation(fields: [store_product_img_id], references: [id], onDelete: Cascade)
+}
+
+model t_store_product_tags {
+  id               BigInt    @id(map: "t_store_tags_pkey")
+  created_dt       DateTime? @default(now()) @db.Timestamp(6)
+  updated_dt       DateTime? @db.Timestamp(6)
+  iname            String?   @db.VarChar(50)
+  store_product_id BigInt?
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_user {
+  id                      BigInt                    @id @default(autoincrement())
+  email                   String?                   @db.VarChar(500)
+  key                     String?                   @db.VarChar(300)
+  created_dt              DateTime?                 @default(now()) @db.Timestamp(6)
+  updated_dt              DateTime?                 @db.Timestamp(6)
+  nick_name               String?                   @db.VarChar(50)
+  b_cash_alarm            Boolean?                  @default(false)
+  b_product_make_alarm    Boolean?                  @default(false)
+  b_store_upload_alarm    Boolean?                  @default(false)
+  b_marketing_alarm       Boolean?                  @default(false)
+  device_token            String?                   @db.VarChar(300)
+  buse                    Boolean?                  @default(true)
+  bdel                    Boolean?                  @default(false)
+  cash                    Int?                      @default(0)
+  login_type              String?                   @db.VarChar(50)
+  t_ask_answer            t_ask_answer[]
+  t_ask_question          t_ask_question[]
+  t_user_coupang_info     t_user_coupang_info[]
+  t_user_favcategory      t_user_favcategory[]
+  t_user_smart_store_info t_user_smart_store_info[]
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_user_coupang_info {
+  id            BigInt    @id
+  user_id       BigInt?
+  account       String?   @db.VarChar(500)
+  password      String?   @db.VarChar(500)
+  business_code String?   @db.VarChar(500)
+  access_key    String?   @db.VarChar(500)
+  secret_key    String?   @db.VarChar(500)
+  created_dt    DateTime? @db.Timestamp(6)
+  updated_dt    DateTime? @db.Timestamp(6)
+  t_user        t_user?   @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}
+
+model t_user_favcategory {
+  id           BigInt       @id @default(autoincrement())
+  created_dt   DateTime?    @default(now()) @db.Timestamp(6)
+  updated_dt   DateTime?    @db.Timestamp(6)
+  pcategory_id BigInt?
+  user_id      BigInt?
+  t_pcategory  t_pcategory? @relation(fields: [pcategory_id], references: [id], onDelete: Cascade)
+  t_user       t_user?      @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_user_smart_store_info {
+  id                     BigInt    @id
+  user_id                BigInt?
+  account                String?   @db.VarChar(500)
+  password               String?   @db.VarChar(500)
+  domain                 String?   @db.VarChar(500)
+  api_connection_account String?   @db.VarChar(500)
+  account_type           String?   @db.VarChar(50)
+  domain_type            String?   @db.VarChar(50)
+  created_dt             DateTime? @db.Timestamp(6)
+  updated_dt             DateTime? @db.Timestamp(6)
+  t_user                 t_user?   @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_withdraw_reason {
+  id                        BigInt                      @id @default(autoincrement())
+  withdraw_reason           String?                     @db.VarChar(400)
+  t_withdraw_reason_history t_withdraw_reason_history[]
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model t_withdraw_reason_history {
+  id                 BigInt             @id @default(autoincrement())
+  withdraw_reason_id BigInt?
+  content            String?            @db.VarChar(400)
+  t_withdraw_reason  t_withdraw_reason? @relation(fields: [withdraw_reason_id], references: [id], onDelete: Cascade)
+}

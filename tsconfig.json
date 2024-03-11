@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "esnext", // or a specific ECMAScript version like "es2020"
+    "module": "NodeNext", // important for ESM
+    "moduleResolution": "NodeNext", // uses Node's module resolution algorithm
+    "strict": false, // enables a wide range of type checking behavior
+    //"esModuleInterop": true, // enables import of CommonJS modules
+    //"skipLibCheck": true,
+    //"forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "emitDecoratorMetadata": true, // typeorm
+    "experimentalDecorators": true, // typeorm
+    "outDir": "./dist", // where to put transpiled files
+    "rootDir": "./src"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
