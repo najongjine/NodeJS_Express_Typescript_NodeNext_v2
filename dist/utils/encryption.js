@@ -40,8 +40,8 @@ let hashPassword = async (password) => {
     const hashedPassword = await bcrypt.hash(password, saltRounds);
     return hashedPassword;
 };
-let crypto2 = "$For^Sy&Company@";
-let cryptoiv2 = "$For^Sy&Company@";
+let crypto2 = "$mykey";
+let cryptoiv2 = "$mykey";
 const txtDecryptFromApp = (strData) => {
     if (!strData)
         return "";

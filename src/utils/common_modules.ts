@@ -1,6 +1,5 @@
 import * as socketIO from "socket.io";
 import { PrismaClient } from "@prisma/client";
-import * as prisAll from "@prisma/client";
 
 export let httpServer_ref: any;
 export let app_ref: any;

@@ -1,6 +1,6 @@
 import express from "express"; // Example using express
 import { PrismaClient } from "@prisma/client";
-import "./redis.js";
+//import "./redis.js";
 import { rateLimit } from "express-rate-limit";
 import { configSettings } from "./config/settings.js";
 import * as common_modules from "./utils/common_modules.js";

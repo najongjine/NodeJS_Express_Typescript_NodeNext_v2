@@ -29,17 +29,16 @@ if (!redisSub) {
         password: configSettings.redisDB.password,
     });
 }
-redisSub?.subscribe("service_db", (err, count) => {
-    if (err) {
-        // Just like other commands, subscribe() can fail for some reasons,
-        // ex network issues.
-        console.error("Failed to subscribe: %s", err.message);
-    }
-    else {
-        // `count` represents the number of channels this client are currently subscribed to.
-        console.log(`Subscribed successfully! This client is currently subscribed to ${count} channels.`);
-    }
-});
+// redisSub?.subscribe("service_db", (err, count) => {
+//   if (err) {
+//     // Just like other commands, subscribe() can fail for some reasons,
+//     // ex network issues.
+//     console.error("Failed to subscribe: %s", err.message);
+//   } else {
+//     // `count` represents the number of channels this client are currently subscribed to.
+//     console.log(`Subscribed successfully! This client is currently subscribed to ${count} channels.`);
+//   }
+// });
 export default {
     redisClient,
     redisPub,
