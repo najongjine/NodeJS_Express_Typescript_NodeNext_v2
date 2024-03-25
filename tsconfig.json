@@ -4,7 +4,8 @@
     "module": "NodeNext", // important for ESM
     "moduleResolution": "NodeNext", // uses Node's module resolution algorithm
     "strict": false, // enables a wide range of type checking behavior
-    //"esModuleInterop": true, // enables import of CommonJS modules
+    "esModuleInterop": true, // enables import of CommonJS modules
+    "resolveJsonModule": true,
     //"skipLibCheck": true,
     //"forceConsistentCasingInFileNames": true,
     "sourceMap": true,

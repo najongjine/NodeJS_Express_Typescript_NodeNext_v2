@@ -5,7 +5,6 @@ import axios from "axios";
 import { configSettings } from "../config/settings.js";
 import * as cts from "./common_types.js";
 import encryption from "./encryption.js";
-import { imageSize } from "image-size";
 import * as cCode from "./error_code.js";
 import * as path from "path";
 
@@ -98,38 +97,7 @@ const checkImgIsWebp_and_in1920 = async (inputPath: string) => {
     return false; // Or throw an error if needed
   }
 };
-const base64_SaveImage = async (base64Image: string, outputPath: string) => {
-  try {
-    // Extract directory path from the full file path
-    const dir = path.dirname(outputPath);
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-    // Convert base64 string to a Buffer
-    const imageBuffer = Buffer.from(base64Image, "base64");
 
-    // Check the image format and dimensions
-    const dimensions = imageSize(imageBuffer);
-    const isWebP = (dimensions?.type ?? "") == "webp";
-    const isWidthWithinLimit = (dimensions?.width ?? 1) <= 1920;
-
-    if (isWebP && isWidthWithinLimit) {
-      // If the image is already a WebP and the width is within the limit, save it directly
-      await sharp(imageBuffer).toFile(outputPath);
-    } else {
-      // Convert the image to WebP and resize it if necessary, then save
-      await sharp(imageBuffer)
-        .resize({ width: isWidthWithinLimit ? dimensions.width : 1920 })
-        .webp()
-        .toFile(outputPath);
-    }
-    return cCode.cCodes.c0;
-  } catch (error: any) {
-    console.error(`!!! base64_SaveImage. `, error);
-    if (fs.existsSync(outputPath)) {
-      fs.unlinkSync(outputPath);
-    }
-    return "";
-  }
-};
 function sanitizeFileName(fileName: string) {
   try {
     // Define a regular expression with characters not allowed in file names
@@ -194,7 +162,6 @@ let utils = {
   checkImgIsWebp_and_in1920,
   assignMatchedKeyValue,
   isValidVersionString,
-  base64_SaveImage,
   jsonStringifyWithBigInt,
 };
 

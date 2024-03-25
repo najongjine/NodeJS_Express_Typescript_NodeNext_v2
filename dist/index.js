@@ -8,10 +8,9 @@ import initializeSocket from "./socket.js";
 //@ts-ignore
 import cors from "cors";
 import helmet from "helmet";
+import * as dotenv from "dotenv";
 import prismaSampleRouter from "./Router/prisma_sample/prisma.js";
 import gradioSampleRouter from "./Router/gradio_sample/gradio.js";
-import * as dotenv from "dotenv";
-import utils from "./utils/utils.js";
 dotenv.config();
 const app = express();
 common_modules.set_app_ref(app);
@@ -40,16 +39,6 @@ app.get("/", rateLimit(getLimitOption), async (req, res) => {
         custMsg: "",
         errMsg: "",
     });
-});
-app.use((req, res, next) => {
-    const originalSend = res.send;
-    res.send = function (body) {
-        if (typeof body === "object") {
-            body = utils.jsonStringifyWithBigInt(body); // Use the custom JSON.stringify function
-        }
-        return originalSend.call(this, body);
-    };
-    next();
 });
 app.listen(configSettings.PORT, () => {
     console.log(`Server running on port ${configSettings.PORT}`);
