@@ -1,3 +1,139 @@
 2024-03-11T13:54:02: [WARN] Redis server does not require a password, but a password was supplied.
 2024-03-11T13:54:02: [WARN] Redis server does not require a password, but a password was supplied.
 2024-03-11T13:54:02: [WARN] Redis server does not require a password, but a password was supplied.
+2024-03-26T10:43:09: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:43:09: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:43:09:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:43:09:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:43:13: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:43:13: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:43:13:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:43:13:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:43:16: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:43:16: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:43:16:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:43:16:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:43:19: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:43:19: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:43:19:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:43:19:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:43:22: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:43:22: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:43:22:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:43:22:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:43:25: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:43:25: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:43:25:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:43:25:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:43:28: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:43:28: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:43:28:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:43:28:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:43:32: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:43:32: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:43:32:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:43:32:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:43:35: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:43:35: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:43:35:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:43:35:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:43:38: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:43:38: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:43:38:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:43:38:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:43:41: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:43:41: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:43:41:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:43:41:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:43:44: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:43:44: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:43:44:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:43:44:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:43:48: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:43:48: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:43:48:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:43:48:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:43:51: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:43:51: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:43:51:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:43:51:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:43:54: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:43:54: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:43:54:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:43:54:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:43:57: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:43:57: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:43:57:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:43:57:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:00: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:00: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:00:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:00:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:04: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:04: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:04:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:04:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:07: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:07: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:07:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:07:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:10: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:10: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:10:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:10:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:13: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:13: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:13:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:13:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:17: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:17: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:17:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:17:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:20: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:20: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:20:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:20:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:23: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:23: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:23:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:23:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:26: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:26: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:26:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:26:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:29: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:29: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:29:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:29:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:32: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:32: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:32:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:32:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:36: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:36: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:36:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:36:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:39: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:39: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:39:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:39:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:42: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:42: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:42:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:42:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:45: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:45: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:45:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:45:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:48: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:48: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:48:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:48:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:52: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:52: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:52:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:52:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+2024-03-26T10:44:55: ReferenceError: require is not defined in ES module scope, you can use import instead
+2024-03-26T10:44:55: This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\DAIN\Documents\Nodejs\NodeExpress_Ts_V2_public\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+2024-03-26T10:44:55:     at file:///C:/Users/DAIN/Documents/Nodejs/NodeExpress_Ts_V2_public/src/index.ts:6:1
+2024-03-26T10:44:55:     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)

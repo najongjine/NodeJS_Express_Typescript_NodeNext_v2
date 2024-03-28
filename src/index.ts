@@ -45,7 +45,7 @@ const getLimitOption = {
 app.get("/", rateLimit(getLimitOption), async (req, res) => {
   return res.status(200).json({
     success: true,
-    data: `__dirname : ${__dirname}`,
+    data: ``,
     custMsg: "",
     errMsg: "",
   });
